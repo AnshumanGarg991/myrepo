@@ -1,7 +1,7 @@
 package myrepo;
 import java.util.Scanner;
 
-public class assgn8{
+public class assgn8 {
     public static double avg(double x,double y,double z){
         return (x+y+z)/3;
     }
