@@ -1,4 +1,3 @@
-package myrepo;
 import java.util.Scanner;
 
 public class areaOfSquare {
