@@ -1,4 +1,4 @@
 #include<stdio.h>
 int main(){
-    printf("Hello DOsto!");
+    int[3] arr; 
 }

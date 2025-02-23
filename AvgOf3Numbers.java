@@ -1,7 +1,6 @@
-package myrepo;
 import java.util.Scanner;
 
-public class assgn8 {
+public class AvgOf3Numbers {
     public static double avg(double x,double y,double z){
         return (x+y+z)/3;
     }
@@ -16,7 +15,6 @@ public class assgn8 {
             num2 = scan.nextDouble();
             System.out.println("Enter the first number:");
             num3 = scan.nextDouble();
-            System.out.println(num1+num2+num3+"Say Hello To THe people of India.");
         }
         System.out.println("The average of entered number is :"+avg(num1,num2,num3));
     }
