@@ -1,6 +1,6 @@
 import java.util.*;
 
-class OldBookStore2 {
+public class OldBookStore2 {
     // Book information
     static ArrayList<String> bName = new ArrayList<>();
     static ArrayList<Integer> bID = new ArrayList<>();
