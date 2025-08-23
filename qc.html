@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .body{
+            display:grid;
+            background-color: rgb(50, 205, 143);
+        }
+        .head{
+            background-color: navy;
+            color: white;
+            justify-content: center;
+            text-align: center;
+        }
+        .menu ul{
+            background-color: rgb(0, 195, 255);
+            gap: 20px;
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .menu ul li a{
+            text-decoration: none;
+            /* list-style: none; */
+            padding: 10px;
+        }
+        .menu ul:hover{
+            size-adjust: 10%;
+
+        }
+        .img{
+            display: grid;
+            justify-self: center;
+            width:auto;
+            height: 400px;
+            text-align: center;
+
+        }
+        .img1{
+            width: 800px;
+            height: 200px;
+            background: url("images/QC13.webp");
+            background: url("images/QC14.jpg");
+            background-size:cover;
+        }
+        .img1 h1 , .img2 h1{
+            text-align: center;
+            color: rgb(4, 180, 255);
+            /* color: navy; */
+        }
+        .img1 p {
+            text-align: center;
+            color: rgb(250, 250, 250);
+        }
+        .img2 h1{
+            text-align: center;
+            color: rgb(4, 180, 255);
+        }
+        .img2 p {
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+        .img2{
+            height: 200px;
+            background: url("images/QC7.jpg");
+            background-size: cover;
+        }
+        
+        .about h1{
+            text-align: center;
+            color:navy;
+        }
+        
+        .about p{
+            width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .upcoming{
+            text-align: center;
+            color: navy;
+            /* width: 800px; */
+            justify-self: center;
+        }
+        /* .upcoming .event2 img{
+            width:300px ;
+            height:180px;
+        } */
+        /* .upcoming{
+            display: flex;
+        } */
+
+        .events {
+            color: white;
+            display: flex;
+            justify-content: center;
+            gap:15px;
+            /* background-color: rgb(237, 234, 234); */
+            width: 700px;
+            padding: 10px;
+            justify-self: center;
+            border-radius: 3px;
+        }
+        .events .event1{
+            background-color: rgb(242, 141, 9);
+            /* /* background-color: rgb(23, 69, 160); */
+            background-color: rgb(49, 53, 117);
+            background-color: rgb(175, 53, 117);
+            padding: 10px;
+            border-radius: 7%;
+        }
+        .events .event2{
+            background-color: blueviolet;
+            background-color: rgb(175, 13, 40);
+            background-color: rgb(175, 53, 117);
+            padding: 10px;
+            border-radius: 7%;
+            
+        }
+        .event1 img , .event2 img{
+            border-radius: 7%;
+            width: auto;
+        }
+        .mem h1{
+            color:navy;
+        }
+        .mem{
+            text-align: center;
+            width: 800px;
+            justify-self: center;
+        }
+        .members{
+            border-radius:5%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            /* background-color: blueviolet; */
+            padding: 10px;
+            justify-self: center;
+        }
+        .mem1, .mem2, .mem3{
+            border-radius: 10%;
+            padding: 5px;
+            background-color: pink;
+            /* background-color: rgb(51, 0, 255); */
+            width: 200px;
+        }
+        .mem3 div{
+            position:relative;
+            /* display: flex; */
+            left: 20px;
+            top: 20px;
+        }
+        .reg h1{
+            /* align-items: center; */
+            text-align: center;
+            
+        }
+        .form{
+            color: navy;
+            justify-self: center;
+            background-color: whitesmoke;
+            padding: 30px;
+            width: 300px;
+            border-radius: 7%;
+            box-shadow: 2px solid black;
+            border-color: black;
+            /* border: 1px solid black; */
+        }
+        input{
+            width: 100%;
+            height: 20px;
+        }
+        input::placeholder{
+            display: flex;
+            color: gray;
+            /* line-height: 50px; */
+            font-size: 16px;
+            top: 0px;
+        }
+        button{
+            width: 60px;
+            height: 30px;
+            color: white;
+            background-color: navy;
+            border-radius: 10%;
+        }
+        input{
+            font-family: 'Times New Roman', Times, serif
+        }
+        .reason{
+            text-overflow: clip;
+            font-style: normal;
+            width: 100%;
+            height:65px;
+            font-size: 16px;
+        }
+        .reg h1{
+            color: navy;
+        }
+        .mem3 div{
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid rgb(255, 255, 255);
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+        .mem3 label{
+            position: relative;
+            top: 50px;
+        }
+        @keyframes spin{
+            0%{
+                border-top: 16px solid goldenrod;
+            }
+            6%{
+                border-top-right-radius: 26px solid goldenrod;
+            }
+            34%{
+                border-right: 16px solid goldenrod;
+            }
+            70%{
+                border-bottom:16px solid goldenrod;
+            }
+            90%{
+                border-left:16px solid goldenrod;
+            }
+            100%{
+                border: 16px solid goldenrod;
+            }
+        }
+        .contactUs{
+            text-align: center;
+        }
+        .news{
+            color: navy;
+            text-align: center;
+        }
+        .newsbox{
+            /* text-align: center; */
+            display: grid;
+            color: black;
+            border: 2px solid navy;
+            border-radius: 10%;
+            height: 350px;
+            background-color: whitesmoke;
+            justify-self: center;
+            width: 320px;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+    <div class="head">
+        <h1>Quantum Club</h1>
+        <p>C.V. Raman Global University</p>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">Members</a></li>
+            <li><a href="">Register</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+    <div class="img">
+        <div class="img1">
+            <h1><em>Innovating the Future with Quantum Computing</em></h1>
+            <p>Join the Quantum Club and be part of the next technological revolution</p>
+        </div>
+        <div class="img2">
+            <h1>Welcome to Quantum Club</h1>
+            <p>Exploring the world of Quantum Computing & Emerging Technologies</p>
+        </div>
+    </div>
+    <br><br>
+    <!-- <div class="about">
+        <h2>About us</h2>
+        <p>The Quantum club at C.V. Raman Global University is a student-led initiative dedicated to exploring the fascinating world of Quantum <br>Computing, Quantum Mechanics, and related emerging technologies. Our mission is to create awareness, encourage research, and<br> foster collaboration among students and faculty.</p>
+    </div> -->
+    <div>
+    <div class="about">
+        <h1 align="center">About us</h1>
+        <p class=".p">The Quantum club at C.V. Raman Global University is a student-led initiative dedicated to exploring the fascinating world of Quantum Computing, Quantum Mechanics, and related emerging technologies. Our mission is to create awareness, encourage research, and foster collaboration among students and faculty.</p>
+    </div><br><br>
+    ]<div class="upcoming">
+        <h1>Upcoming Events</h1>
+       <div class="events">
+        <div class="event1">
+            <img src="images/QC_event2.jpg"  height="200px" width="250px">
+            <h4>Quantum Workshop</h4>
+            <a href="https://www.youtube.com/watch?v=XlfHfQ9lhxk" style="color:white; text-decoration: none;" target="_blank">Hands-on introduction to Quantum Programming with Qiskit.</a>
+
+        </div>
+        <div class="event2" ><img src="images/QC_event3.webp" height="200px" width="250px"><h4>Guest seminar</h4>
+            <!-- <p>Talk by industry experts on Quantum Applications in AI.</p> -->
+            <a href="https://www.youtube.com/watch?v=XlfHfQ9lhxk" style="color: white;" target="_blank">Talk by industry experts on Quantum Applications in AI.</a>
+        </div>
+        </div>
+    </div>
+    <div class="news">
+        <h1>News and Articles</h1>
+        <div class="newsbox" >
+            <marquee><em><h1>News/Articles</h1></em></marquee>
+            
+        </div>
+    </div>
+    <br><br><br>
+    <div class="mem">
+        <h1>Our Members</h1>
+        <div class="members">
+            <div class="mem1"><img src="images/Dr. Kitty Yeung.jpg" height="200px" width="180px" id="m1"><br>Dr. Kitty Yeung<a href="https://quantumzeitgeist.com/exclusive-interview-with-kitty-yeung-senior-program-manager-at-microsoft-quantum/"  target="_blank"><br>Senior Quantum Architect for Microsoft Quantum Systems</a></div>
+            <div class="mem2"><img src="images/QC_mem.jpeg" height="200px" width="180px" id="m2">Robert “Bob” Sutor,<a href="https://quantumzeitgeist.com/quantum-book-review-dancing-with-qubits/" target="_blank" ><br>a technical Leader and IT Executive of IBM</a></div>
+            <div Class="mem3"><div id="loader">
+                <!-- <img src="images/Dr. Kitty Yeung.jpg" height="100px" width="100px"> -->
+            </div>
+            <label for="loader">Next?</label></div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="reg">
+        <h1>Register for Membership</h1>
+        <br>
+        <form class="form" action="#" target="_blank" method="post">
+            <h3>Full Name *</h3>
+            <input placeholder="Enter your name" type="text" required>
+            <h3>Email Address *</h3>
+            <input placeholder="Enter your name" type="email" required>
+            <h3>Department *</h3>
+            <select required>
+                <option>--Select your department--</option>
+                <option value="">Computer Science and Engineering</option>
+                <option value="">CSE- AIML</option>
+                <option value="">CSE- DS</option>
+                <option value="">CSE- AIDS</option>
+                <option value="">CSIT</option>
+                <option value="">CSE- Cybersecurity</option>
+                <option value="">CSE- Software Engineering</option>
+                <option value="">Mechanical Engineering</option>
+                <option value="">Civil Engineering</option>
+                <option value="">Electronics and Communications Engineering</option>
+                <option value="">Electronics and Electrical Engineering</option>
+                <option value="">Electrical Engineering</option>
+                <option value="">Marine Engineering</option>
+                <option value="">Chemical Engineering</option>
+                <option value="">Robotics and Embedded Systems</option>
+            </select>
+            <h3>Why do you want to join? *</h3>
+            <textarea placeholder="Write here..." class="reason" minlength="10" maxlength="200" required ></textarea>
+            <br><br>
+            <button type="submit">Register</button>
+        </form>>
+    </div>
+    <div class="contactUs">
+        <h1 align="center" style="color: navy;"><emp>Contact us</emp></h1>
+        <p>&#x1F4E7;Email: <a href="#"target="_blank" style="text-decoration: none; color: black;">quantumclub@cgu-odisha.ac.in</a></p>
+        <p></p><a href="#"target="_blank" style="text-decoration: none; color: black;">&#128205;Address: C.V. Raman Global University, Bhubaneswar, Odisha</a></p>
+    </div>
+    
+    </div>
+    <footer style="color:#f3f3f3; text-align: center; background-color: navy; height: 25px; padding-top: 5px;">2025 Quantum Club, C.V. Raman Global University. All rights reserved.</footer>
+</body>
+</html>
